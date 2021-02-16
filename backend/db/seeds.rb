@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+User.create(name: "Kameron", email: "kam.hungerford@gmail.com")
+User.create(name: "Grace", email: "gracexpwnz@gmail.com")
+User.create(name: "Linda", email: "lmhungerford@yahoo.com")
+User.create(name: "Blake", email: "blakepetes@gmail.com")
+
+Song.create(name: "Basshead", artist: "Bassnectar", album: "Timestrech", album_cover: "https://ibb.co/YhFJz6J")
+Song.create(name: "Trigger Happy", artist: "Liquid Stranger", album: "Tales of Wakaan", album_cover: "https://ibb.co/SxXRp48")
+Song.create(name: "Harmony", artist: "Clozee", album: "Harmony", album_cover: "https://ibb.co/Pts5w12")
+Song.create(name: "Griztronics", artist: "GRIZ & Subtronics", album: "Bangers[2].Zip", album_cover: "https://ibb.co/QnVLVtm")
+Song.create(name: "Conrank", artist: "Drum In Time", album: "What's a FKNG Conrank", album_cover: "https://ibb.co/h8Kqnq0")
