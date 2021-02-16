@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2021_02_16_232528) do
     t.string "album"
     t.string "album_cover"
     t.integer "user_id"
+    t.index ["user_id"], name: "index_songs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

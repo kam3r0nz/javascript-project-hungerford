@@ -5,7 +5,7 @@ class Songs < ActiveRecord::Migration[6.1]
       t.string :artist
       t.string :album
       t.string :album_cover
-      t.integer :user_id
+      t.belongs_to :user
     end
   end
 end
