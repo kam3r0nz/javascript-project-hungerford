@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2021_02_16_232528) do
 
   create_table "songs", force: :cascade do |t|
-    t.string "name"
+    t.string "title"
     t.string "artist"
     t.string "album"
     t.string "album_cover"
