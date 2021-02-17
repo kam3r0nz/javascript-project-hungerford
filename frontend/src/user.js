@@ -3,4 +3,6 @@ class User {
         this.name = name
         this.email = email
     }
+
+    // render user instance method
 }
