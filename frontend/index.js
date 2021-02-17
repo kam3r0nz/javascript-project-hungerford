@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', e => {
         const container = document.getElementById('container')
         const newForm = document.createElement('form')
         newForm.className = 'login fade-in'
-        newForm.innerHTML = '<input type="email" placeholder="Email"> <input type="submit" value="Enter">'
+        newForm.innerHTML = '<input type="text" id="name" placeholder="Name"> <input type="email" id="email" placeholder="Email"> <input type="submit" value="Enter">'
         container.appendChild(newForm)
     })
 })
