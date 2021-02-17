@@ -1394,3 +1394,206 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms | Allocations: 789)
 
 
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:53:29 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.6ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:53:30 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.6ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:53:30 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.9ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:53:30 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.4ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:54:07 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 1.3ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:54:36 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.0ms | Allocations: 789)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 15:54:50 -0600
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 1.0ms | Allocations: 789)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-02-17 15:59:57 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 9.2ms | Allocations: 5083)
+
+
+  
+NoMethodError (undefined method `json' for #<Api::V1::UsersController:0x007fa4dd4dad08>
+Did you mean?  JSON):
+  
+app/controllers/api/v1/users_controller.rb:9:in `show'
+Started GET "/api/v1/users/1" for ::1 at 2021-02-17 16:00:10 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (1) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 2.1ms | Allocations: 3719)
+
+
+Started GET "/api/v1/users/7" for ::1 at 2021-02-17 16:00:50 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (7) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3760)
+
+
+Started GET "/api/v1/users/7" for ::1 at 2021-02-17 16:02:32 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (7) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 3719)
+
+
+Started GET "/api/v1/users/5" for ::1 at 2021-02-17 16:02:34 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (5) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 618)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2021-02-17 16:02:38 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (4) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 618)
+
+
+Started GET "/api/v1/users/3" for ::1 at 2021-02-17 16:02:40 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (3) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 618)
+
+
+Started GET "/api/v1/users" for ::1 at 2021-02-17 16:02:44 -0600
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 796)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:02:47 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE (6) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 618)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:03:11 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 2579)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:03:12 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 486)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:03:22 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 2279)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:03:23 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 486)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2021-02-17 16:03:33 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 16ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 2279)
+
+
+Started GET "/api/v1/users/5" for ::1 at 2021-02-17 16:03:36 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 487)
+
+
+Started GET "/api/v1/users/4" for ::1 at 2021-02-17 16:03:38 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 1950)
+
+
+Started GET "/api/v1/users/3" for ::1 at 2021-02-17 16:03:42 -0600
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 518)
+
+

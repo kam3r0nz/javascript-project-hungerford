@@ -5,5 +5,8 @@ class User {
         this.email = email
     }
 
-    // render user instance method
+    renderuser() {
+        let usersDiv = document.getElementById('users-container')
+        usersDiv.innerHTML += `<ul><li>${this.name} - ${this.email}</li></li>`
+    }
 }

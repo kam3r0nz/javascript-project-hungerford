@@ -9,9 +9,8 @@ function fetchUsers() {
         .then(resp => resp.json())
         .then(users => {
             for (const user of users) {
-                console.log(user)
                 let u = new User(user.id, user.name, user.email)
-                console.log(u)
+                u.renderuser()
             }
         })
 }
