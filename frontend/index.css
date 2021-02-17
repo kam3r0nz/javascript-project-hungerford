@@ -23,28 +23,29 @@ input[type="email"], input[type="text"], input[type="submit"] {
     -moz-animation: fadeIn ease 2s;
     -o-animation: fadeIn ease 2s;
     -ms-animation: fadeIn ease 2s;
-    }
-    @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-    }
+}
     
-    @-moz-keyframes fadeIn {
+@keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-    }
+}
     
-    @-webkit-keyframes fadeIn {
+@-moz-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-    }
+}
     
-    @-o-keyframes fadeIn {
+@-webkit-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-    }
+}
     
-    @-ms-keyframes fadeIn {
+@-o-keyframes fadeIn {
     0% {opacity:0;}
     100% {opacity:1;}
-    }
+}
+    
+@-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
