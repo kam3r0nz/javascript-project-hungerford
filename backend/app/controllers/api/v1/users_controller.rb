@@ -14,11 +14,12 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        user = User.find_or_initialize_by(user_params)
-        if user.save
-            render json: user
+        if User.find_by(name: user_params[:name])
+            user = User.find_by(name: user_params[:name])
+            redirect_to "/api/v1/users/#{user.id}"
         else
-            render json: { Error: "There was an error saving the user." }
+            user = User.create(user_params)
+            render json: user
         end
     end
 
