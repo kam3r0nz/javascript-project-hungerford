@@ -1,16 +1,13 @@
 window.addEventListener('DOMContentLoaded', e => {
-    fetchUsers()
+    createArrowButton()
 })
 
-const baseUrl = 'http://localhost:3000/api/v1'
+function createArrowButton() {
+    let arrowButton = document.getElementById('arrow')
+    arrowButton.addEventListener('click', createForm)
+}
 
-function fetchUsers() {
-    fetch(`${baseUrl}/users`)
-        .then(resp => resp.json())
-        .then(users => {
-            for (const user of users) {
-                let u = new User(user.id, user.name, user.email)
-                u.renderuser()
-            }
-        })
+function createForm() {
+    let usersForm = document.getElementById('users-form')
+    usersForm.innerHTML = '<form class="fade-in"> <input type="text" name="name" id="name" placeholder="Name"> <br> <input type="email" name="email" id="email" placeholder="Email"> <input type="submit" id="submit" value="Enter"> </form>'
 }
