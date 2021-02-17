@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
     def show
         user = User.find_by(id: params[:id])
         if user
-            render json: {id: user.id, name: user.name, email: user.email, songs: user.songs}
+            render json: {id: user.id, name: user.name, songs: user.songs}
         else
             render json: { Error: "That user does not exist." }
         end
@@ -26,6 +26,6 @@ class Api::V1::UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(:name)
     end
 end

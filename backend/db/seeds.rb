@@ -1,7 +1,7 @@
-User.create(name: "Kameron", email: "kam.hungerford@gmail.com")
-User.create(name: "Grace", email: "gracexpwnz@gmail.com")
-User.create(name: "Linda", email: "lmhungerford@yahoo.com")
-User.create(name: "Blake", email: "blakepetes@gmail.com")
+User.create(name: "Kameron")
+User.create(name: "Grace")
+User.create(name: "Linda")
+User.create(name: "Blake")
 
 Song.create(title: "Basshead", artist: "Bassnectar", album: "Timestrech", album_cover: "https://ibb.co/YhFJz6J", user_id: 1)
 Song.create(title: "Trigger Happy", artist: "Liquid Stranger", album: "Tales of Wakaan", album_cover: "https://ibb.co/SxXRp48", user_id: 1)
