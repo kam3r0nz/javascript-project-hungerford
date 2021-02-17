@@ -1281,3 +1281,59 @@ Processing by Api::V1::SongsController#index as */*
 Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.9ms | Allocations: 1004)
 
 
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:02:56 -0600
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 1000)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:02:56 -0600
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1000)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:02:56 -0600
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.8ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.8ms | Allocations: 1000)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:04:36 -0600
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (1.0ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 1.0ms | Allocations: 1004)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:05:07 -0600
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms | Allocations: 1004)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:05:42 -0600
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.4ms | Allocations: 1004)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:06:16 -0600
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.9ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.9ms | Allocations: 1004)
+
+
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 13:06:26 -0600
+Processing by Api::V1::SongsController#index as */*
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.7ms | Allocations: 1004)
+
+
