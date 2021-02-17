@@ -1884,3 +1884,39 @@ Processing by Api::V1::UsersController#show as HTML
 Completed 200 OK in 183ms (Views: 80.9ms | ActiveRecord: 2.8ms | Allocations: 10053)
 
 
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 16:37:38 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 6.6ms | ActiveRecord: 1.6ms | Allocations: 4733)
+
+
+Started GET "/api/v1/songs/1" for ::1 at 2021-02-17 16:37:41 -0600
+Processing by Api::V1::SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1526)
+
+
+  
+NameError (uninitialized constant Api::V1::SongsController::Songs):
+  
+app/controllers/api/v1/songs_controller.rb:8:in `show'
+Started GET "/api/v1/songs" for ::1 at 2021-02-17 16:37:59 -0600
+Processing by Api::V1::SongsController#index as HTML
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs"[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 999)
+
+
+Started GET "/api/v1/songs/1" for ::1 at 2021-02-17 16:38:10 -0600
+Processing by Api::V1::SongsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/api/v1/songs_controller.rb:8:in `show'
+  [1m[36mSong Load (0.7ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/songs_controller.rb:8:in `show'
+Completed 200 OK in 30ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 4908)
+
+
