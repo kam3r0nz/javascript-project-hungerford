@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', e => {
     console.log('Window loaded')
 
-    fetch('http://localhost:3000/songs')
+    fetch('http://localhost:3000/api/v1/songs')
         .then(resp => resp.json())
         .then(data => console.log(data))
 
@@ -13,8 +13,8 @@ window.addEventListener('DOMContentLoaded', e => {
         console.log('this has been clicked')
         const container = document.getElementById('container')
         const newForm = document.createElement('form')
-        newForm.className = 'login'
-        newForm.innerHTML = '<input type="text"><br><input type="submit">'
+        newForm.className = 'login fade-in'
+        newForm.innerHTML = '<input type="email" placeholder="Email"> <input type="submit" value="Enter">'
         container.appendChild(newForm)
     })
 })
