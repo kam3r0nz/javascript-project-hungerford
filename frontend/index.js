@@ -1,3 +1,1 @@
-window.addEventListener('DOMContentLoaded', e => {
-    console.log('Window loaded')
-})
+// anything that doesn't belong in song.js, user.js or service.js
