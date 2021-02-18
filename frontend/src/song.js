@@ -8,10 +8,10 @@ class Song {
         this.user = song.user_id
     }
 
-    static createSongForm() {
+    static addSongButton() {
         let body = document.getElementById('container')
-        let songForm = document.getElementById('songs-form')
-        songForm.innerHTML = '<input type="text">'
+        let songButton = document.createElement('button')
+        songButton.innerHTML = 'Add Song'
     }
 
     postSongs() {
@@ -19,6 +19,7 @@ class Song {
         let newUl = document.createElement('ul')
         body.append(newUl)
         let newLi = document.createElement('li')
+        newLi.setAttribute('data-id', this.id)
         newLi.innerHTML = this.title + " - " + this.artist
         newUl.append(newLi)
     }

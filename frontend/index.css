@@ -57,5 +57,6 @@ input[type="text"], input[type="submit"] {
 }
 
 ul {
-    list-style: none;
+    padding: 0;
+    list-style-type: none;
 }
