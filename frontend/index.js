@@ -20,11 +20,16 @@ function addSongButton() {
     let songButton = document.createElement('button')
     songButton.innerHTML = 'Add Song'
     body.appendChild(songButton)
-    songButton.addEventListener('click', addSongForm)
+    songButton.addEventListener('click', e => {
+        e.preventDefault()
+        addSongForm()
+    })
 }
 
 function addSongForm() {
+    let body = document.getElementById('container')
     let songsForm = document.createElement('div')
     songsForm.setAttribute('id', 'songs-form')
-    console.log(songsForm)
+    songsForm.innerHTML = '<form class="fade-in"> <input type="text" name="title" id="title" placeholder="Title"> <br> <input type="text" name="artist" id="artist" placeholder="Artist"> <br> <input type="text" name="album" id="album" placeholder="Album"> <br> <input type="text" name="album_cover" id="album_cover" placeholder="Album cover"> <br> <input type="submit" id="submit" value="Save"> </form>'
+    body.append(songsForm)
 }
