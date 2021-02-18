@@ -7,4 +7,4 @@ Song.create(title: "Basshead", artist: "Bassnectar", album: "Timestrech", album_
 Song.create(title: "Trigger Happy", artist: "Liquid Stranger", album: "Tales of Wakaan", album_cover: "https://ibb.co/SxXRp48", user: user1)
 Song.create(title: "Harmony", artist: "Clozee", album: "Harmony", album_cover: "https://ibb.co/Pts5w12", user: user1)
 Song.create(title: "Griztronics", artist: "GRIZ & Subtronics", album: "Bangers[2].Zip", album_cover: "https://ibb.co/QnVLVtm", user: user1)
-Song.create(title: "Conrank", artist: "Drum In Time", album: "What's a FKNG Conrank", album_cover: "https://ibb.co/h8Kqnq0", user: user1)
+Song.create(title: "Drum In Time", artist: "Conrank", album: "What's a FKNG Conrank", album_cover: "https://ibb.co/h8Kqnq0", user: user1)

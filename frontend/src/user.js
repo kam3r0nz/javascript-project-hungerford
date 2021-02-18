@@ -24,11 +24,14 @@ class User {
         welcomeMessage.setAttribute('data-id', this.id)
         welcomeMessage.innerHTML = `<h2>Welcome, ${this.name}!</h2>`
         body.append(welcomeMessage)
+        
         if (this.songs) {
             this.songs.forEach(function(song) {
                 let newSong = new Song(song)
                 newSong.postSongs()
             })
         }
+        addSongButton()
     }
+    
 }
