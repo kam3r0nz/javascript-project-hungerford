@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 class User {
-    constructor(id, name) {
-        this.id = id
-        this.name = name
+    constructor(user) {
+        this.id = user.id
+        this.name = user.name
     }
 
     static createUser() {
@@ -16,15 +16,15 @@ class User {
                 method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
-                'Accepts': 'application/json'
+                'Accept': 'application/json'
                 },
                 body: JSON.stringify({user: {name: e.target.children[0].value}})
                      
             })
                 .then(resp => resp.json())
                 .then(user => {
+                    console.log(user)
                     let newUser = new User(user)
-                    console.log(newUser)
                     newUser.displayUser()
                 })
         })
@@ -33,9 +33,9 @@ class User {
     displayUser() {
         let body = document.getElementById('container')
         body.innerHTML = ''
-        let userGreeting = document.createElement('p')
-        userGreeting.setAttribute('data-id', this.id)
-        userGreeting.innerHTML = `<h1>Welcome, ${this.name}!</h1>`
-        body.append(userGreeting)
+        let welcomeMessage = document.createElement('p')
+        welcomeMessage.setAttribute('data-set', this.id)
+        welcomeMessage.innerHTML = `<h1>Welcome, ${this.name}!</h1>`
+        body.append(welcomeMessage)
     }
 }
