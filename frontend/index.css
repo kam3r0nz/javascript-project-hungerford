@@ -18,6 +18,7 @@ input[type="text"], input[type="submit"], button {
     color: #FFF;
     background-color: #000;
     border: 2px solid #000;
+    border-radius: 6px;
     padding: 5px;
     margin: 5px;
     font-family: 'Poppins', sans-serif;

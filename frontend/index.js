@@ -3,6 +3,11 @@ const apiService = new ApiService()
 window.addEventListener('DOMContentLoaded', e => {
     createArrowButton()
     User.fakeLogin()
+
+    const title = document.getElementById('title')
+    const artist = document.getElementById('artist')
+    const album = document.getElementById('album')
+    const albumCover = document.getElementById('album_cover')
 })
 
 function createArrowButton() {
@@ -42,5 +47,18 @@ function showSongForm() {
 
 function mountFormListener() {
     let songForm = document.getElementById('song-form')
-    console.log(songForm)
+    songForm.addEventListener('submit', e => {
+        e.preventDefault()
+        const songObj = getSongData(e.target)
+        console.log(songObj)
+    })
+}
+
+const getSongData = function(form) {
+    return {
+        title: title.value,
+        artist: artist.value,
+        album: album.value,
+        albumCover: album_cover.value
+    }
 }
