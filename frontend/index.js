@@ -94,11 +94,11 @@ function mountSongToDom(songObj) {
     body.append(songDiv)        
     let newP = document.createElement('p')
     newP.className = 'song-info'
-    newP.innerHTML = `${songObj.title} by ${songObj.artist} <br> <small>${songObj.album}</small>`
+    newP.innerHTML = `${this.title} by ${this.artist} <br> <small>${this.album}</small>`
     songDiv.append(newP)
     let albumCover = document.createElement('img')
-    albumCover.setAttribute('src', songObj.album_cover)
-    albumCover.setAttribute('alt', `Album cover for ${songObj.album}`)
+    albumCover.setAttribute('src', this.album_cover)
+    albumCover.setAttribute('alt', `Album cover for ${this.album}`)
     albumCover.className = 'album-cover'
     songDiv.append(albumCover)
     let deleteButtonDiv = document.createElement('div')
