@@ -83,13 +83,14 @@ function createSong(songObj) {
         body: JSON.stringify({song: songObj})
     })
     mountSongToDom(songObj)
+    mountDeleteListener()
 }
 
 function mountSongToDom(songObj) {
     let body = document.getElementById('container')
     let songDiv = document.createElement('div')
     songDiv.setAttribute('data-id', this.id)
-    songDiv.className = 'song-box'
+    songDiv.className = 'song-box fade-in'
     body.append(songDiv)        
     let newP = document.createElement('p')
     newP.className = 'song-info'
@@ -107,7 +108,6 @@ function mountSongToDom(songObj) {
     deleteButton.className = 'delete'
     deleteButton.innerHTML = 'Delete'
     deleteButtonDiv.append(deleteButton)
-    mountDeleteListener()
 }
 
 function deleteSongFetch(id) {
