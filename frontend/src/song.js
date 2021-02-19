@@ -16,7 +16,7 @@ class Song {
         body.append(songDiv)        
         let newP = document.createElement('p')
         newP.className = 'song-info'
-        newP.innerHTML = this.title + " - " + this.artist
+        newP.innerHTML = `${this.title} by ${this.artist} <br> <small>${this.album}</small>`
         songDiv.append(newP)
         let albumCover = document.createElement('img')
         albumCover.setAttribute('src', this.albumCover)

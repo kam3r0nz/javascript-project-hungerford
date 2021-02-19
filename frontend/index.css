@@ -24,6 +24,10 @@ input[type="text"], input[type="submit"], button {
     font-family: 'Poppins', sans-serif;
 }
 
+::placeholder {
+    color: #777;
+}
+
 .fade-in {
     animation: fadeIn ease 1s;
     -webkit-animation: fadeIn ease 1s;
@@ -58,12 +62,11 @@ input[type="text"], input[type="submit"], button {
 }
 
 .song-box {
-    width: 300px;
+    width: 400px;
     height: 300px;
-    border: 2px solid black;
-    
     margin: 10px;
     padding: 5px;
+    display: inline-block;
 }
 
 .song-info {
@@ -72,6 +75,8 @@ input[type="text"], input[type="submit"], button {
 }
 
 .album-cover {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px #000;
 }
