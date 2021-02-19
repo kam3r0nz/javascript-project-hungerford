@@ -10,15 +10,18 @@ class Song {
 
     postSongs() {
         let body = document.getElementById('container')
-        let newUl = document.createElement('ul')
-        body.append(newUl)
-        let newLi = document.createElement('li')
-        newLi.setAttribute('data-id', this.id)
-        newLi.innerHTML = this.title + " - " + this.artist
+        let songDiv = document.createElement('div')
+        songDiv.setAttribute('data-id', this.id)
+        songDiv.className = 'song-box'
+        body.append(songDiv)
+        // let newLi = document.createElement('li')
+        // newLi.setAttribute('data-id', this.id)
+        let newP = document.createElement('p')
+        newP.className = 'song-info'
+        newP.innerHTML = this.title + " - " + this.artist
+        songDiv.append(newP)
         let albumCover = document.createElement('img')
         albumCover.setAttribute('src', this.albumCover)
-        newLi.append(albumCover)
-        newUl.append(newLi)
     }
 
 }

@@ -57,7 +57,16 @@ input[type="text"], input[type="submit"], button {
     100% {opacity:1;}
 }
 
-ul {
-    padding: 0;
-    list-style-type: none;
+.song-box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    border-radius: 100px;
+    display: inline-flex;
+    margin: 10px;
+    padding: 10px;
+}
+
+.song-info {
+    font-weight: bold;
 }
