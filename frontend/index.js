@@ -94,11 +94,11 @@ function mountSongToDom(songObj) {
     body.append(songDiv)        
     let newP = document.createElement('p')
     newP.className = 'song-info'
-    newP.innerHTML = `${this.title} by ${this.artist} <br> <small>${this.album}</small>`
+    newP.innerHTML = `${songObj.title} by ${songObj.artist} <br> <small>${songObj.album}</small>`
     songDiv.append(newP)
     let albumCover = document.createElement('img')
-    albumCover.setAttribute('src', this.album_cover)
-    albumCover.setAttribute('alt', `Album cover for ${this.album}`)
+    albumCover.setAttribute('src', songObj.album_cover)
+    albumCover.setAttribute('alt', `Album cover for ${songObj.album}`)
     albumCover.className = 'album-cover'
     songDiv.append(albumCover)
     let deleteButtonDiv = document.createElement('div')
@@ -123,10 +123,10 @@ function deleteSongFetch(id) {
 }
 
 function mountDeleteListener() {
-    let deleteButtons = document.getElementsByClassName('delete')
+    const deleteButtons = document.getElementsByClassName('delete')
     for (const deleteButton of deleteButtons) {
         deleteButton.addEventListener('click', e => {
-            const id = e.target.parentElement.id
+            const id = e.target.closest('.song-box').getAttribute('data-id')
             deleteSongFetch(id)
         })
     }

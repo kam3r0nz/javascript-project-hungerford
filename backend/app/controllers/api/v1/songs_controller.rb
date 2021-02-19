@@ -19,7 +19,6 @@ class Api::V1::SongsController < ApplicationController
     end
 
     def destroy
-        byebug
         song = Song.find_by(id: params[:id])
         song.destroy
         render json: song
