@@ -3,7 +3,6 @@ const apiService = new ApiService()
 window.addEventListener('DOMContentLoaded', e => {
     createArrowButton()
     User.fakeLogin()
-    ApiService.fetchSongs()
 
     const title = document.getElementById('title')
     const artist = document.getElementById('artist')
@@ -108,6 +107,7 @@ function mountSongToDom(songObj) {
     deleteButton.className = 'delete'
     deleteButton.innerHTML = 'Delete'
     deleteButtonDiv.append(deleteButton)
+    mountDeleteListener()
 }
 
 function deleteSongFetch(id) {
@@ -119,15 +119,17 @@ function deleteSongFetch(id) {
         }
     })
         .then(resp => resp.json())
-        .then(data => console.log(data))
+        .then(data => ApiService.fetchSongs())
 }
 
 function mountDeleteListener() {
     const deleteButtons = document.getElementsByClassName('delete')
     for (const deleteButton of deleteButtons) {
         deleteButton.addEventListener('click', e => {
+            e.preventDefault()
             const id = e.target.closest('.song-box').getAttribute('data-id')
             deleteSongFetch(id)
+            e.target.closest('.song-box').remove()
         })
     }
 }
