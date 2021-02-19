@@ -14,7 +14,7 @@ body {
     margin: 10px;
 }
 
-input[type="text"], input[type="submit"] {
+input[type="text"], input[type="submit"], button {
     color: #FFF;
     background-color: #000;
     border: 2px solid #000;
@@ -24,11 +24,11 @@ input[type="text"], input[type="submit"] {
 }
 
 .fade-in {
-    animation: fadeIn ease 2s;
-    -webkit-animation: fadeIn ease 2s;
-    -moz-animation: fadeIn ease 2s;
-    -o-animation: fadeIn ease 2s;
-    -ms-animation: fadeIn ease 2s;
+    animation: fadeIn ease 1s;
+    -webkit-animation: fadeIn ease 1s;
+    -moz-animation: fadeIn ease 1s;
+    -o-animation: fadeIn ease 1s;
+    -ms-animation: fadeIn ease 1s;
 }
     
 @keyframes fadeIn {
@@ -59,4 +59,8 @@ input[type="text"], input[type="submit"] {
 ul {
     padding: 0;
     list-style-type: none;
+}
+
+#songs-form-container {
+    display: none;
 }
