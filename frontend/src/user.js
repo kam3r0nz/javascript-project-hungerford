@@ -32,7 +32,6 @@ class User {
                 newSong.postSongs()
             })
         }
-        
     }
 
 }

@@ -17,4 +17,10 @@ class ApiService {
                     return resp.json()
                 })
     }
+
+    static fetchSongs() {
+        return fetch('http://localhost:3000/api/v1/songs')
+            .then(resp => resp.json())
+            .then(songs => console.log(songs))
+    }
 }
