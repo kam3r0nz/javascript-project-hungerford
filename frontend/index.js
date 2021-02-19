@@ -46,7 +46,7 @@ function showSongForm() {
     addSongContainer.append(songFormContainer)
     let songForm = document.createElement('form')
     songForm.setAttribute('id', 'song-form')
-    songForm.setAttribute('class', 'fade-in')
+    songForm.className = 'fade-in'
     songForm.innerHTML = '<input type="text" name="title" id="title" placeholder="Title">  <input type="text" name="artist" id="artist" placeholder="Artist">  <input type="text" name="album" id="album" placeholder="Album">  <input type="text" name="album_cover" id="album_cover" placeholder="Album cover"> <input type="submit" id="submit" value="Save">'
     songFormContainer.append(songForm)
     mountFormListener()
@@ -64,11 +64,14 @@ function mountFormListener() {
 }
 
 const getSongData = function(form) {
+    const welcomeMessage = document.getElementById('welcome-message')
+    const userId = welcomeMessage.dataset.id
     return {
         title: title.value,
         artist: artist.value,
         album: album.value,
-        album_cover: album_cover.value
+        album_cover: album_cover.value,
+        user_id: userId
     }
 }
 

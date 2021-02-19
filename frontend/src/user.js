@@ -19,6 +19,7 @@ class User {
 
     displayUser() {
         let body = document.getElementById('container')
+        body.className = 'fade-in'
         body.innerHTML = ''
         let welcomeMessage = document.createElement('p')
         welcomeMessage.id = 'welcome-message'
