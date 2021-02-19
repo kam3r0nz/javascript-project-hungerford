@@ -14,7 +14,10 @@ window.addEventListener('DOMContentLoaded', e => {
 
 function createArrowButton() {
     let arrowButton = document.getElementById('arrow')
-    arrowButton.addEventListener('click', createForm)
+    arrowButton.addEventListener('click', e => {
+        createForm()
+        arrowButton.remove()
+    })
 }
 
 function createForm() {

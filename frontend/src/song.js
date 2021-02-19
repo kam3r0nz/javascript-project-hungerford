@@ -19,7 +19,8 @@ class Song {
         newP.innerHTML = `${this.title} by ${this.artist} <br> <small>${this.album}</small>`
         songDiv.append(newP)
         let albumCover = document.createElement('img')
-        albumCover.setAttribute('src', this.albumCover)
+        albumCover.setAttribute('src', this.album_cover)
+        albumCover.setAttribute('alt', `Album cover for ${this.album}`)
         albumCover.className = 'album-cover'
         songDiv.append(albumCover)
     }
