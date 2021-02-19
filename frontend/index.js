@@ -3,11 +3,13 @@ const apiService = new ApiService()
 window.addEventListener('DOMContentLoaded', e => {
     createArrowButton()
     User.fakeLogin()
+    fetchSongs()
 
     const title = document.getElementById('title')
     const artist = document.getElementById('artist')
     const album = document.getElementById('album')
     const albumCover = document.getElementById('album_cover')
+    const user = document.getElementById('welcome-message')
 })
 
 function createArrowButton() {
@@ -54,6 +56,8 @@ function mountFormListener() {
         e.preventDefault()
         const songObj = getSongData(e.target)
         console.log(songObj)
+        createSong(songObj)
+        e.target.reset
     })
 }
 
@@ -62,6 +66,23 @@ const getSongData = function(form) {
         title: title.value,
         artist: artist.value,
         album: album.value,
-        albumCover: album_cover.value
+        album_cover: album_cover.value
     }
+}
+
+function createSong(songObj) {
+    fetch('http://localhost:3000/api/v1/songs', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({song: songObj})
+    })
+}
+
+function fetchSongs() {
+    fetch('http://localhost:3000/api/v1/songs')
+        .then(resp => resp.json())
+        .then(songs => console.log(songs))
 }

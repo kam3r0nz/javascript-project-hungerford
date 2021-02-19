@@ -4,7 +4,7 @@ class Song {
         this.title = song.title
         this.artist = song.artist
         this.album = song.album
-        this.albumCover = song.album_cover
+        this.album_cover = song.album_cover
         this.user = song.user_id
     }
 

@@ -21,6 +21,7 @@ class User {
         let body = document.getElementById('container')
         body.innerHTML = ''
         let welcomeMessage = document.createElement('p')
+        welcomeMessage.id = 'welcome-message'
         welcomeMessage.setAttribute('data-id', this.id)
         welcomeMessage.innerHTML = `<h2>Welcome, ${this.name}!</h2>`
         body.append(welcomeMessage)
