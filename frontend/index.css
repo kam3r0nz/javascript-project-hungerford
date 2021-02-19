@@ -1,5 +1,8 @@
 body {
-    background-color: #1DB954;
+    /* background-color: #1DB954; */
+    background-image: linear-gradient(#1DB954, #1DB954, #FFF);
+    background-attachment: fixed;
+    background-size: cover;
     margin: 0px auto;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -7,8 +10,30 @@ body {
 
 #container {
     width: 90%;
+    height: auto;
     margin: 0 auto;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 #logo {
     width: 30px;
@@ -82,6 +107,6 @@ input[type="text"], input[type="submit"], input[type="url"], button {
 .album-cover {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
-    box-shadow: 0 0 10px #000;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #000;
 }
