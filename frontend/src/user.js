@@ -32,5 +32,5 @@ class User {
         }
         addSongButton()
     }
-    
+
 }
