@@ -57,7 +57,6 @@ function mountFormListener() {
     songForm.addEventListener('submit', e => {
         e.preventDefault()
         const songObj = getSongData(e.target)
-        console.log(songObj)
         createSong(songObj)
         songForm.reset()
     })
@@ -84,4 +83,22 @@ function createSong(songObj) {
         },
         body: JSON.stringify({song: songObj})
     })
+    mountSongToDom(songObj)
+}
+
+function mountSongToDom(songObj) {
+    let body = document.getElementById('container')
+    let songDiv = document.createElement('div')
+    songDiv.setAttribute('data-id', this.id)
+    songDiv.className = 'song-box'
+    body.append(songDiv)        
+    let newP = document.createElement('p')
+    newP.className = 'song-info'
+    newP.innerHTML = `${songObj.title} by ${songObj.artist} <br> <small>${songObj.album}</small>`
+    songDiv.append(newP)
+    let albumCover = document.createElement('img')
+    albumCover.setAttribute('src', songObj.album_cover)
+    albumCover.setAttribute('alt', `Album cover for ${songObj.album}`)
+    albumCover.className = 'album-cover'
+    songDiv.append(albumCover)
 }
