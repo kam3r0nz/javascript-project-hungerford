@@ -101,4 +101,11 @@ function mountSongToDom(songObj) {
     albumCover.setAttribute('alt', `Album cover for ${songObj.album}`)
     albumCover.className = 'album-cover'
     songDiv.append(albumCover)
+    let deleteButtonDiv = document.createElement('div')
+    deleteButtonDiv.className = 'delete-button'
+    songDiv.append(deleteButtonDiv)
+    let deleteButton = document.createElement('button')
+    deleteButton.className = 'delete'
+    deleteButton.innerHTML = 'Delete'
+    deleteButtonDiv.append(deleteButton)
 }

@@ -21,6 +21,6 @@ class ApiService {
     static fetchSongs() {
         return fetch('http://localhost:3000/api/v1/songs')
             .then(resp => resp.json())
-            .then(songs => console.log(songs))
+            .then(songs => songs)
     }
 }
