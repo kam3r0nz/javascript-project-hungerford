@@ -21,7 +21,7 @@ function createArrowButton() {
 
 function createForm() {
     let usersForm = document.getElementById('users-form')
-    usersForm.innerHTML = '<form class="fade-in"> <input type="text" name="name" id="name" placeholder="Name"> <input type="submit" id="submit" value="Enter"> </form>'
+    usersForm.innerHTML = '<form class="fade-in"> <input type="text" name="name" id="name" placeholder="Name" required> <input type="submit" id="submit" value="Enter"> </form>'
 }
 
 function addSongButton() {
@@ -47,7 +47,7 @@ function showSongForm() {
     let songForm = document.createElement('form')
     songForm.setAttribute('id', 'song-form')
     songForm.className = 'fade-in'
-    songForm.innerHTML = '<input type="text" name="title" id="title" placeholder="Title">  <input type="text" name="artist" id="artist" placeholder="Artist">  <input type="text" name="album" id="album" placeholder="Album">  <input type="url" name="album_cover" id="album_cover" placeholder="Album cover(url)"> <input type="submit" id="submit" value="Save">'
+    songForm.innerHTML = '<input type="text" name="title" id="title" placeholder="Title" required>  <input type="text" name="artist" id="artist" placeholder="Artist" required>  <input type="text" name="album" id="album" placeholder="Album" required>  <input type="url" name="album_cover" id="album_cover" placeholder="Album cover(url)" required> <input type="submit" id="submit" value="Save">'
     songFormContainer.append(songForm)
     mountFormListener()
 }

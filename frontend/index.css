@@ -19,7 +19,7 @@ body {
     margin: 10px;
 }
 
-input[type="text"], input[type="submit"], button {
+input[type="text"], input[type="submit"], input[type="url"], button {
     color: #FFF;
     background-color: #000;
     border: 2px solid #000;
