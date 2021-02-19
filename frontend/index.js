@@ -109,3 +109,27 @@ function mountSongToDom(songObj) {
     deleteButton.innerHTML = 'Delete'
     deleteButtonDiv.append(deleteButton)
 }
+
+function deleteSongFetch(id) {
+    fetch(`http://localhost:3000/api/v1/songs/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+        .then(resp => resp.json())
+        .then(data => console.log(data))
+}
+
+function mountDeleteListener() {
+    let deleteButtons = document.getElementsByClassName('delete')
+    for (const deleteButton of deleteButtons) {
+        deleteButton.addEventListener('click', e => {
+            e.preventDefault()
+            const id = e.target.parentElement.id
+            deleteSongFetch(id)
+        })
+    }
+    
+}
