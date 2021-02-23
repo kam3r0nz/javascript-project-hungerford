@@ -13,12 +13,12 @@ window.addEventListener('DOMContentLoaded', e => {
 function createArrowButton() {
     let arrowButton = document.getElementById('arrow')
     arrowButton.addEventListener('click', e => {
-        createForm()
+        createUserForm()
         arrowButton.remove()
     })
 }
 
-function createForm() {
+function createUserForm() {
     let usersForm = document.getElementById('users-form')
     usersForm.innerHTML = '<form class="fade-in"> <input type="text" name="name" id="name" placeholder="Name" required> <input type="submit" id="submit" value="Enter"> </form>'
 }

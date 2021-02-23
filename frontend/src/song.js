@@ -8,7 +8,7 @@ class Song {
         this.user = song.user_id
     }
 
-    postSongs() {
+    postSong() {
         let body = document.getElementById('container')
         let songDiv = document.createElement('div')
         songDiv.setAttribute('data-id', this.id)
