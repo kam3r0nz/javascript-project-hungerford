@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', e => {
 function createArrowButton() {
     let arrowButton = document.getElementById('arrow')
     arrowButton.addEventListener('click', e => {
+        e.preventDefault()
         createUserForm()
         arrowButton.remove()
     })
@@ -33,12 +34,12 @@ function addSongButton() {
     newContainer.appendChild(songButton)
     songButton.addEventListener('click', e => {
         e.preventDefault()
-        showSongForm()
+        createSongForm()
         songButton.remove()
     })
 }
 
-function showSongForm() {
+function createSongForm() {
     let addSongContainer = document.getElementById('add-song-container')
     let songFormContainer = document.createElement('div')
     songFormContainer.setAttribute('id', 'song-form-container')
@@ -48,15 +49,16 @@ function showSongForm() {
     songForm.className = 'fade-in'
     songForm.innerHTML = '<input type="text" name="title" id="title" placeholder="Title" required>  <input type="text" name="artist" id="artist" placeholder="Artist" required>  <input type="text" name="album" id="album" placeholder="Album" required>  <input type="url" name="album_cover" id="album_cover" placeholder="Album cover(url)" required> <input type="submit" id="submit" value="Save">'
     songFormContainer.append(songForm)
-    mountFormListener()
+    mountSongFormListener()
 }
 
-function mountFormListener() {
+function mountSongFormListener() {
     let songForm = document.getElementById('song-form')
     songForm.addEventListener('submit', e => {
         e.preventDefault()
-        const songObj = getSongData(e.target)
-        createSong(songObj)
+        apiService.fetchCreateSong(e)
+        const newSong = getSongData(e.target)
+        mountSongToDom(newSong)
         songForm.reset()
     })
 }
@@ -73,18 +75,15 @@ const getSongData = function(form) {
     }
 }
 
-function createSong(songObj) {
-    fetch('http://localhost:3000/api/v1/songs', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        },
-        body: JSON.stringify({song: songObj})
-    })
-    mountSongToDom(songObj)
-    mountDeleteListener()
-}
+// function createSong(songObj) {
+//         apiService.fetchCreateSong(songObj)
+//         .then(song => {
+//             let newSong = new Song(song)
+//             mountSongToDom(newSong)
+//             mountDeleteListener()
+//         })
+    
+// }
 
 function mountSongToDom(songObj) {
     let body = document.getElementById('container')
@@ -108,6 +107,7 @@ function mountSongToDom(songObj) {
     deleteButton.className = 'delete'
     deleteButton.innerHTML = 'Delete'
     deleteButtonDiv.append(deleteButton)
+    mountDeleteListener()
 }
 
 function deleteSongFetch(id) {
