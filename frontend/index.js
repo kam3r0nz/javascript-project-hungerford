@@ -27,7 +27,7 @@ function createUserForm() {
 function addSongButton() {
     let body = document.getElementById('container')
     let newContainer = document.createElement('div')
-    newContainer.setAttribute('id', 'add-song-container')
+    newContainer.setAttribute('id', 'song-form-container')
     body.append(newContainer)
     let songButton = document.createElement('button')
     songButton.innerHTML = 'Add Song'
@@ -40,10 +40,7 @@ function addSongButton() {
 }
 
 function createSongForm() {
-    let addSongContainer = document.getElementById('add-song-container')
-    let songFormContainer = document.createElement('div')
-    songFormContainer.setAttribute('id', 'song-form-container')
-    addSongContainer.append(songFormContainer)
+    let songFormContainer = document.getElementById('song-form-container')
     let songForm = document.createElement('form')
     songForm.setAttribute('id', 'song-form')
     songForm.className = 'fade-in'
@@ -53,7 +50,7 @@ function createSongForm() {
 }
 
 const getSongData = function(form) {
-    const welcomeMessage = document.getElementById('welcome-message')
+    let welcomeMessage = document.getElementById('welcome-message')
     const userId = welcomeMessage.dataset.id
     return {
         title: title.value,
@@ -74,7 +71,6 @@ function mountSongFormListener() {
                 newSong.mountSongToDom()
                 mountDeleteListener()
             })
-        const newSong = getSongData(e.target)
         songForm.reset()
     })
 }
