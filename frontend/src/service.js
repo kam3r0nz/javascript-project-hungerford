@@ -18,17 +18,6 @@ class ApiService {
                 })
     }
 
-    static fetchSongs() {
-        return fetch('http://localhost:3000/api/v1/songs')
-                .then(resp => resp.json())
-                .then(songs => function() {
-                    for (const song of songs) {
-                        let newSong = new Song(song)
-                        newSong.mountSongToDom()
-                    }
-                })
-    }
-
     createSong(e) {
         return fetch('http://localhost:3000/api/v1/songs', {
                 method: 'POST',
@@ -46,4 +35,4 @@ class ApiService {
             method: 'DELETE'
         })
     }
-} 
+}
