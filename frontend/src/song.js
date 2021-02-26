@@ -12,7 +12,7 @@ class Song {
         let body = document.getElementById('container')
         let songDiv = document.createElement('div')
         songDiv.setAttribute('data-id', this.id)
-        songDiv.className = 'song-box'
+        songDiv.className = 'song-box fade-in'
         body.append(songDiv)        
         let newP = document.createElement('p')
         newP.className = 'song-info'

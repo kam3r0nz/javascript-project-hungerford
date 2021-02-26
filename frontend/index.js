@@ -69,8 +69,8 @@ function mountSongFormListener() {
             .then(song => {
                 let newSong = new Song(song)
                 newSong.mountSongToDom()
+                songForm.reset()
             })
-        songForm.reset()
     })
 }
 

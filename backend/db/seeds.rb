@@ -3,7 +3,7 @@ User.create(name: "Grace")
 User.create(name: "Linda")
 User.create(name: "Blake")
 
-Song.create(title: "Basshead", artist: "Bassnectar", album: "Timestrech", album_cover: "https://i.ibb.co/BB5vXmv/timestretch.jpg", user: user1)
+Song.create(title: "Basshead", artist: "Bassnectar", album: "Timestretch", album_cover: "https://i.ibb.co/BB5vXmv/timestretch.jpg", user: user1)
 Song.create(title: "Trigger Happy", artist: "Liquid Stranger", album: "Tales of Wakaan", album_cover: "https://i.ibb.co/6ZRg57x/talesofwakaan.jpg", user: user1)
 Song.create(title: "Harmony", artist: "Clozee", album: "Harmony", album_cover: "https://i.ibb.co/jH9Lg3C/harmony.jpg", user: user1)
 Song.create(title: "Griztronics", artist: "GRIZ & Subtronics", album: "Bangers[2].Zip", album_cover: "https://i.ibb.co/wCqVqj6/Bangers-2.jpg", user: user1)
