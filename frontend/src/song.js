@@ -30,6 +30,7 @@ class Song {
         deleteButton.className = 'delete'
         deleteButton.innerHTML = 'Delete'
         deleteButtonDiv.append(deleteButton)
+        mountDeleteListener()
     }
 
 }

@@ -31,7 +31,6 @@ class User {
             this.songs.forEach(function(song) {
                 let newSong = new Song(song)
                 newSong.mountSongToDom()
-                mountDeleteListener()
             })
         }
     }
