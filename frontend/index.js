@@ -57,8 +57,11 @@ function mountSongFormListener() {
     songForm.addEventListener('submit', e => {
         e.preventDefault()
         apiService.fetchCreateSong(e)
+            .then(song => {
+                let newSong = new Song(song)
+                newSong.mountSongToDom()
+            })
         const newSong = getSongData(e.target)
-        mountSongToDom(newSong)
         songForm.reset()
     })
 }
@@ -73,41 +76,6 @@ const getSongData = function(form) {
         album_cover: album_cover.value,
         user_id: userId
     }
-}
-
-// function createSong(songObj) {
-//         apiService.fetchCreateSong(songObj)
-//         .then(song => {
-//             let newSong = new Song(song)
-//             mountSongToDom(newSong)
-//             mountDeleteListener()
-//         })
-    
-// }
-
-function mountSongToDom(songObj) {
-    let body = document.getElementById('container')
-    let songDiv = document.createElement('div')
-    songDiv.setAttribute('data-id', this.id)
-    songDiv.className = 'song-box fade-in'
-    body.append(songDiv)        
-    let newP = document.createElement('p')
-    newP.className = 'song-info'
-    newP.innerHTML = `${songObj.title} by ${songObj.artist} <br> <small>${songObj.album}</small>`
-    songDiv.append(newP)
-    let albumCover = document.createElement('img')
-    albumCover.setAttribute('src', songObj.album_cover)
-    albumCover.setAttribute('alt', `Album cover for ${songObj.album}`)
-    albumCover.className = 'album-cover'
-    songDiv.append(albumCover)
-    let deleteButtonDiv = document.createElement('div')
-    deleteButtonDiv.className = 'delete-button'
-    songDiv.append(deleteButtonDiv)
-    let deleteButton = document.createElement('button')
-    deleteButton.className = 'delete'
-    deleteButton.innerHTML = 'Delete'
-    deleteButtonDiv.append(deleteButton)
-    mountDeleteListener()
 }
 
 function deleteSongFetch(id) {

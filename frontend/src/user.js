@@ -30,7 +30,7 @@ class User {
         if (this.songs) {
             this.songs.forEach(function(song) {
                 let newSong = new Song(song)
-                newSong.postSong()
+                newSong.mountSongToDom()
                 mountDeleteListener()
             })
         }
