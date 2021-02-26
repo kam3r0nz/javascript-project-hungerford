@@ -14,7 +14,7 @@ class ApiService {
                      
         })
                 .then(resp => {
-                return resp.json()
+                    return resp.json()
                 })
     }
 
@@ -24,12 +24,12 @@ class ApiService {
                 .then(songs => function() {
                     for (const song of songs) {
                         let newSong = new Song(song)
-                        newSong.postSong()
+                        newSong.mountSongToDom()
                     }
                 })
     }
 
-    fetchCreateSong(e) {
+    createSong(e) {
         return fetch('http://localhost:3000/api/v1/songs', {
                 method: 'POST',
                 headers: {
@@ -41,4 +41,9 @@ class ApiService {
                 .then(resp => resp.json())
     }
 
+    deleteSong(e, id) {
+        return fetch(`http://localhost:3000/api/v1/songs/${id}`, {
+            method: 'DELETE'
+        })
+    }
 } 

@@ -52,20 +52,6 @@ function createSongForm() {
     mountSongFormListener()
 }
 
-function mountSongFormListener() {
-    let songForm = document.getElementById('song-form')
-    songForm.addEventListener('submit', e => {
-        e.preventDefault()
-        apiService.fetchCreateSong(e)
-            .then(song => {
-                let newSong = new Song(song)
-                newSong.mountSongToDom()
-            })
-        const newSong = getSongData(e.target)
-        songForm.reset()
-    })
-}
-
 const getSongData = function(form) {
     const welcomeMessage = document.getElementById('welcome-message')
     const userId = welcomeMessage.dataset.id
@@ -78,16 +64,19 @@ const getSongData = function(form) {
     }
 }
 
-function deleteSongFetch(id) {
-    fetch(`http://localhost:3000/api/v1/songs/${id}`, {
-        method: 'DELETE',
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
+function mountSongFormListener() {
+    let songForm = document.getElementById('song-form')
+    songForm.addEventListener('submit', e => {
+        e.preventDefault()
+        apiService.createSong(e)
+            .then(song => {
+                let newSong = new Song(song)
+                newSong.mountSongToDom()
+                mountDeleteListener()
+            })
+        const newSong = getSongData(e.target)
+        songForm.reset()
     })
-        .then(resp => resp.json())
-        .then(data => ApiService.fetchSongs())
 }
 
 function mountDeleteListener() {
@@ -96,7 +85,7 @@ function mountDeleteListener() {
         deleteButton.addEventListener('click', e => {
             e.preventDefault()
             const id = e.target.closest('.song-box').getAttribute('data-id')
-            deleteSongFetch(id)
+            apiService.deleteSong(e, id)
             e.target.closest('.song-box').remove()
         })
     }
