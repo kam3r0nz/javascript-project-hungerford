@@ -1,24 +1,32 @@
-# README
+# Notify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Notify is an application that allows a user to manage their music collection. A user can add songs and delete them if they no longer want that song in their collection. Notify uses JavaScript as it's frontend and a Rails API for it's backend. 
 
-Things you may want to cover:
+# Installation
 
-* Ruby version
+To use this app, just clone this repo.
 
-* System dependencies
+And then execute:
 
-* Configuration
+$ bundle install
 
-* Database creation
+# Usage
 
-* Database initialization
+After cloning the repository and running bundle, the server can be started from the backend:
+Step 1) Run: rake db:migrate
+Step 2) Run: rake db:seed
+Step 3) Run: rails s
 
-* How to run the test suite
+Index.html, on the frontend, should then be opened in a browser.
 
-* Services (job queues, cache servers, search engines, etc.)
+# Contributing
 
-* Deployment instructions
+Bug reports and pull requests are welcome on GitHub at https://github.com/kam3r0nz/javascript-project-hungerford. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
 
-* ...
+# License
+
+The app is available as open source under the terms of the MIT License.
+
+# Code of Conduct
+
+Everyone interacting in the BPTracker project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
