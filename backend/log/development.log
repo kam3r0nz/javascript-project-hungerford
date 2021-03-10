@@ -25207,3 +25207,297 @@ Processing by Api::V1::UsersController#show as JSON
 Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.0ms | Allocations: 1854)
 
 
+Started POST "/api/v1/users" for ::1 at 2021-03-10 16:57:20 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 16:57:20 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 1856)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 16:59:03 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 16:59:03 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 27ms (Views: 3.9ms | ActiveRecord: 0.8ms | Allocations: 1855)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 16:59:38 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 16:59:38 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 0.8ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:00:22 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:00:22 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:03:20 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:03:20 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:03:38 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:03:38 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:04:12 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:04:12 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:04:16 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:04:16 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:05:03 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:05:03 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:05:19 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:05:19 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:05:36 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:05:36 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.5ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:05:57 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:05:57 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:06:11 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:06:11 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.4ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+
+Started POST "/api/v1/users" for ::1 at 2021-03-10 17:07:16 -0600
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"name"=>"Kameron"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:17:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Kameron"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:18:in `create'
+Redirected to http://localhost:3000/api/v1/users/1
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms | Allocations: 893)
+
+
+Started GET "/api/v1/users/1" for ::1 at 2021-03-10 17:07:16 -0600
+Processing by Api::V1::UsersController#show as JSON
+  Parameters: {"id"=>"1", "user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:8:in `show'
+  [1m[36mSong Load (0.3ms)[0m  [1m[34mSELECT "songs".* FROM "songs" WHERE "songs"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:10:in `show'
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 1854)
+
+

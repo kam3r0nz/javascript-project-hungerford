@@ -24,13 +24,6 @@ function createUserForm() {
     usersForm.innerHTML = '<form class="fade-in"> <input type="text" name="name" id="name" placeholder="Name" required> <input type="submit" id="submit" value="Enter"> </form>'
 }
 
-function createSortButton() {
-    let body = document.getElementById('container')
-    let sortButton = document.createElement('button')
-    sortButton.innerHTML = 'Sort'
-    body.append(sortButton)
-}
-
 function addSongButton() {
     let body = document.getElementById('container')
     let newContainer = document.createElement('div')
